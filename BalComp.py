@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 
 #%% Download Data as Pandas DataFrames
-file_location = 'E:\Bring Home\SDS\\bal_iteration_Expl_180503.xlsx'
+file_location ='C:\Users\cahuddle\Documents\Python Scripts\first_repo\bal_iteration_Expl_180503.xlsx'
 excel_sheet = 'bal(t=5)'
 sds = pd.read_excel(file_location,sheet_name = excel_sheet, skiprows = 8, \
                       index_col = 'Standard Inputs and Outputs')
@@ -19,7 +19,7 @@ params = pd.read_excel(file_location,sheet_name = excel_sheet, nrows = 6, \
                       index_col = 'Parameter Inputs', usecols = [0,1,2,3])
 drm = pd.read_excel(file_location,sheet_name = excel_sheet, skiprows = 9, \
                     nrows = 102, usecols = [7,8,9,10,11,12])
-
+# Test Comment
 #%% Convert DataFrame Values to Variables and Matrices
 bal_positiveccs = np.matrix([[params.loc['G1_']['RATIO']], \
                      [params.loc['G2_']['RATIO']], \
